@@ -53,10 +53,13 @@ class DynamicIntArrayTest {
 		dia.add(1);
 		dia.add(2);
 		dia.add(3);
+		dia.add(4);
+
 		
 		dia.remove(1);
 		
 		assertEquals(1, dia.get(0));
+
 		assertEquals(3, dia.get(1));
 		
 	}
