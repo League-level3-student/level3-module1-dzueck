@@ -32,6 +32,12 @@ public class _03_MurderOfCrows {
          */
         
         /* 2. How many innocent crows had to die before the diamond was found? */
+    	for(int i = 0; i < theMurder.size(); i++) {
+    		if(theMurder.get(i).getStomachContents().contains("diamond")) {
+    			System.out.println("it twas crow " + i + ". Get em boys.");
+    			break;
+    		}
+    	}
     	
     }
 

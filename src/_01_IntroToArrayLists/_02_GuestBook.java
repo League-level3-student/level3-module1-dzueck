@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import _02_GuestBook_classes.AddButton;
+import _02_GuestBook_classes.ViewButton;
 
 public class _02_GuestBook {
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 
@@ -34,12 +35,20 @@ public class _02_GuestBook {
 		frame.add(panel);
 		frame.setSize(500, 500);
 		frame.setVisible(true);
-		viewButton.setBounds(0, 0, 100, 40);
-		addButton.setBounds( 110, 0, 100, 40);
+		viewButton.setLocation(0, 0);
+		addButton.setLocation(0, 50);
+		viewButton.setSize(100, 40);
+		addButton.setSize(100, 40);
 		viewButton.setVisible(true);
 		addButton.setVisible(true);
-		frame.add(viewButton);
-		frame.add(addButton);
+		panel.add(viewButton);
+		panel.add(addButton);
+		addButton.addActionListener(new AddButton(this));
+		viewButton.addActionListener(new ViewButton(this));
+
+		while(true) {
+			
+		}
 	}
 	
 	public void addGuest() {
