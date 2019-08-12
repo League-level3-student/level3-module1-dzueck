@@ -46,12 +46,12 @@ public class IntegerStack {
 	//5. Complete the clear method to set the
 	//   member array to a new array of length 0
 	public void clear() {
-		
+		ints = new int[0];
 	}
 	
 	//6. Complete the size method to return 
 	//   the length of the member array
 	public int size() {
-		return 0;
+		return ints.length;
 	}
 }
